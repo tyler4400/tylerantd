@@ -28,6 +28,25 @@ function App() {
 			      cool link 3
 		      </MenuItem>
 	      </Menu>
+	      <Menu defaultIndex={0} onSelect={(index) => {alert(index)}} mode="vertical">
+		      <MenuItem>
+			      cool link
+		      </MenuItem>
+		      <MenuItem disabled>
+			      cool link 2
+		      </MenuItem>
+		      <SubMenu title="dropdown">
+			      <MenuItem>
+				      dropdown 1
+			      </MenuItem>
+			      <MenuItem>
+				      dropdown 2
+			      </MenuItem>
+		      </SubMenu>
+		      <MenuItem>
+			      cool link 3
+		      </MenuItem>
+	      </Menu>
 
 	      <h1>Button</h1>
 	      <Button className="custom"> Hello </Button>
