@@ -8,14 +8,14 @@ function App() {
     <div className="App">
       <header className="App-header">
 	      <Menu defaultIndex={0} onSelect={(index) => {alert(index)}} >
-		      <MenuItem index={0}>
+		      <MenuItem>
 			      cool link
 		      </MenuItem>
-		      <MenuItem index={1} disabled>
+		      <MenuItem disabled>
 			      disabled llink
 		      </MenuItem>
-		      <MenuItem index={2}>
-			      cool link 3
+		      <MenuItem index={123}>
+			      cool link 123
 		      </MenuItem>
 	      </Menu>
 
