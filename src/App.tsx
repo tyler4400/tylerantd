@@ -2,23 +2,34 @@ import React from 'react';
 import Button, {ButtonSize, ButtonType} from "./components/Button/button";
 import Menu from "./components/Menu/menu";
 import MenuItem from "./components/Menu/menuItem";
+import SubMenu from "./components/Menu/subMenu";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-	      <Menu defaultIndex={0} onSelect={(index) => {alert(index)}} >
+	      <h1>Menu</h1>
+	      <Menu defaultIndex={0} onSelect={(index) => {alert(index)}}>
 		      <MenuItem>
 			      cool link
 		      </MenuItem>
 		      <MenuItem disabled>
-			      disabled llink
+			      cool link 2
 		      </MenuItem>
-		      <MenuItem index={123}>
-			      cool link 123
+		      <SubMenu title="dropdown">
+			      <MenuItem>
+				      dropdown 1
+			      </MenuItem>
+			      <MenuItem>
+				      dropdown 2
+			      </MenuItem>
+		      </SubMenu>
+		      <MenuItem>
+			      cool link 3
 		      </MenuItem>
 	      </Menu>
 
+	      <h1>Button</h1>
 	      <Button className="custom"> Hello </Button>
 	      <Button disabled> Disabled Button </Button>
 	      <Button btnType={ButtonType.Primary} size={ButtonSize.Large}> Large Primary </Button>
